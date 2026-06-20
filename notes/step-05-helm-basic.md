@@ -6,3 +6,7 @@
 - templated ConfigMap, Secret, Deployment, Service
 - templated Mongo Service and StatefulSet
 - added NOTES.txt
+
+- removed manual Kubernetes resources before Helm install
+- installed Helm release demo
+- verified rollout and rendered release manifest

@@ -1,0 +1,22 @@
+NAME                                      READY   STATUS        RESTARTS      AGE
+pod/demo-mongo-0                          1/1     Running       0             13s
+pod/demo-movie-chart-56ff4cc5c9-rj7vl     1/1     Running       0             13s
+pod/demo-movie-chart-56ff4cc5c9-sp94k     1/1     Running       0             13s
+pod/local-wp-mariadb-0                    1/1     Running       1 (15m ago)   6d5h
+pod/local-wp-wordpress-697d97cf5d-6cvt8   1/1     Running       1 (15m ago)   6d5h
+pod/mongo-0                               1/1     Running       0             9m26s
+pod/movie-api-774cdc76dd-z6f8m            1/1     Terminating   0             3m58s
+pod/movie-api-774cdc76dd-ztbdk            1/1     Terminating   0             4m5s
+pod/nginx-85bc587484-cpf94                1/1     Running       1 (15m ago)   6d2h
+
+NAME                                TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+service/demo-mongo                  ClusterIP      None            <none>        27017/TCP                       13s
+service/demo-movie-chart            ClusterIP      10.97.162.46    <none>        80/TCP                          13s
+service/kubernetes                  ClusterIP      10.96.0.1       <none>        443/TCP                         6d7h
+service/local-wp                    NodePort       10.111.164.1    <none>        8080:30182/TCP,8443:31604/TCP   6d5h
+service/local-wp-mariadb            ClusterIP      10.111.99.187   <none>        3306/TCP                        6d5h
+service/local-wp-mariadb-headless   ClusterIP      None            <none>        3306/TCP                        6d5h
+service/local-wp-wordpress          LoadBalancer   10.100.195.29   <pending>     80:32753/TCP,443:30209/TCP      6d5h
+service/mongo                       ClusterIP      None            <none>        27017/TCP                       9m26s
+service/movie-api                   ClusterIP      10.97.24.49     <none>        80/TCP                          13m
+service/nginx-svc                   ClusterIP      10.108.187.25   <none>        80/TCP                          6d2h
