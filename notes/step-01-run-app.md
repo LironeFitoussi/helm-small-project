@@ -10,3 +10,7 @@
 
 - created python virtualenv under movie-api
 - installed app requirements
+
+- first venv used python 3.7 and failed on fastapi 0.115.0
+- recreated venv with python 3.12
+- installed requirements from movie-api/requirements.txt
