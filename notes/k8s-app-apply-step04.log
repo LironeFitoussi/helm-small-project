@@ -1,0 +1,4 @@
+configmap/movie-api-config unchanged
+secret/movie-api-secret configured
+deployment.apps/movie-api unchanged
+service/movie-api unchanged
