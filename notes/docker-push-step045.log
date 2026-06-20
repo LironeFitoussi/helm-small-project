@@ -1,0 +1,117 @@
+The push refers to repository [docker.io/idf775/movie-api]
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Waiting
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6dc8148c4b61: Layer already exists
+6cbda64e7fbe: Waiting
+6ec7f4e699d7: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+6cbda64e7fbe: Layer already exists
+6ec7f4e699d7: Layer already exists
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Waiting
+fff48cdf805e: Waiting
+72c03230f136: Waiting
+b2248b00f696: Waiting
+851221cd1456: Waiting
+4b6b2afbcb1e: Waiting
+b49ad2e83ee2: Waiting
+c2ff74f1159e: Layer already exists
+fff48cdf805e: Layer already exists
+72c03230f136: Layer already exists
+b2248b00f696: Layer already exists
+851221cd1456: Layer already exists
+4b6b2afbcb1e: Layer already exists
+b49ad2e83ee2: Waiting
+b49ad2e83ee2: Pushed
+1.1: digest: sha256:c5d9280c5ff7e026e79ae538209458b0cedb6fee046c5f3b6aa1b59d75371f17 size: 856
