@@ -1,0 +1,8 @@
+nohup: ignoring input
+INFO:     Started server process [14812]
+INFO:     Waiting for application startup.
+INFO:movie-api:starting up (log level=INFO)
+INFO:movie-api:[db] connected to mongodb://localhost:27017/movies
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50510 - "GET /health HTTP/1.1" 200 OK
