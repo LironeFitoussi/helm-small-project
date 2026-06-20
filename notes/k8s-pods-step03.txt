@@ -1,0 +1,3 @@
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+movie-api-66dd87c575-48zm4   1/1     Running   0          22s   10.244.0.43   minikube   <none>           <none>
+movie-api-66dd87c575-wk8tg   1/1     Running   0          22s   10.244.0.42   minikube   <none>           <none>

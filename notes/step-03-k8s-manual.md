@@ -5,3 +5,7 @@
 - added Deployment with 2 replicas and probes
 - added ClusterIP Service
 - image: idf775/movie-api:1.0
+
+- applied k8s manifests
+- checked rollout status
+- checked pods and deployment logs
