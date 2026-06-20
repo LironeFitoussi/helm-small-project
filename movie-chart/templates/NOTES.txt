@@ -6,9 +6,9 @@ kubectl port-forward svc/{{ include "movie-chart.fullname" . }} 8080:{{ .Values.
 Health:
 curl http://localhost:8080/health
 
-{{- if .Values.mongo.enabled }}
+{{- if .Values.mongodb.enabled }}
 MongoDB mode: in-cluster Mongo enabled.
-Mongo service: {{ include "movie-chart.mongoName" . }}
+Mongo service: {{ .Release.Name }}-mongodb
 {{- else }}
 MongoDB mode: external Mongo.
 {{- end }}

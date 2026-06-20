@@ -17,6 +17,3 @@ app: {{ include "movie-chart.name" . }}
 release: {{ .Release.Name }}
 {{- end -}}
 
-{{- define "movie-chart.mongoName" -}}
-{{- printf "%s-mongo" .Release.Name | trunc 63 | trimSuffix "-" -}}
-{{- end -}}

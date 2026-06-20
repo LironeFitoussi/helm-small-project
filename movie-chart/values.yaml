@@ -14,13 +14,22 @@ config:
   PORT: "3000"
 
 secret:
-  mongoUri: "mongodb://{{ .Release.Name }}-mongo:27017/movies"
+  mongoUri: "mongodb://root:secretpass@{{ .Release.Name }}-mongodb:27017/movies?authSource=admin"
 
-mongo:
+mongodb:
   enabled: true
-  image: mongo:7
-  storage: 1Gi
-  port: 27017
+  architecture: standalone
+  auth:
+    rootPassword: "secretpass"
+  persistence:
+    enabled: true
+    size: 1Gi
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/mongodb
+  global:
+    security:
+      allowInsecureImages: true
 
 extraEnv:
   LOG_LEVEL: "info"
