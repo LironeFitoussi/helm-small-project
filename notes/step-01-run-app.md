@@ -20,3 +20,7 @@
 
 - created one movie through POST /movies
 - verified movie appears in GET /movies
+
+- deleted movie by id
+- verified list after delete
+- Step 01 completed
