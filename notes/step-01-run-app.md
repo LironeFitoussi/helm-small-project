@@ -17,3 +17,6 @@
 
 - ran api with MONGO_URI=mongodb://localhost:27017/movies
 - verified /health endpoint
+
+- created one movie through POST /movies
+- verified movie appears in GET /movies
