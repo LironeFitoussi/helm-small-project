@@ -14,10 +14,13 @@ spec:
     spec:
       containers:
         - name: movie-api
-          image: idf775/movie-api:1.0
+          image: idf775/movie-api:1.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
+          env:
+            - name: LOG_LEVEL
+              value: "info"
           envFrom:
             - configMapRef:
                 name: movie-api-config

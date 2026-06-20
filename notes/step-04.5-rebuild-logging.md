@@ -5,3 +5,6 @@
 
 - built image idf775/movie-api:1.1
 - pushed image idf775/movie-api:1.1 to Docker Hub
+
+- updated k8s deployment image to idf775/movie-api:1.1
+- added LOG_LEVEL=info env var
