@@ -1,0 +1,7 @@
+replicaCount: 4
+
+service:
+  type: LoadBalancer
+
+extraEnv:
+  LOG_LEVEL: "warn"

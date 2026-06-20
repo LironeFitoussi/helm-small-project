@@ -1,0 +1,17 @@
+{{- if .Values.mongo.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "movie-chart.mongoName" . }}
+  labels:
+    {{- include "movie-chart.labels" . | nindent 4 }}
+    component: mongo
+spec:
+  clusterIP: None
+  selector:
+    {{- include "movie-chart.selectorLabels" . | nindent 4 }}
+    component: mongo
+  ports:
+    - port: {{ .Values.mongo.port }}
+      targetPort: 27017
+{{- end }}

@@ -1,0 +1,26 @@
+replicaCount: 2
+
+image:
+  repository: idf775/movie-api
+  tag: "1.1"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+config:
+  PORT: "3000"
+
+secret:
+  mongoUri: "mongodb://{{ .Release.Name }}-mongo:27017/movies"
+
+mongo:
+  enabled: true
+  image: mongo:7
+  storage: 1Gi
+  port: 27017
+
+extraEnv:
+  LOG_LEVEL: "info"
