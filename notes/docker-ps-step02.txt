@@ -1,0 +1,2 @@
+NAMES              IMAGE                   STATUS          PORTS
+movie-api-step02   dude775/movie-api:1.0   Up 28 seconds   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp

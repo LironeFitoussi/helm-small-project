@@ -1,0 +1,159 @@
+---
+# Source: movie-chart/templates/secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: demo-movie-chart-secret
+  labels:
+    app: movie-chart
+    release: demo
+    chart: movie-chart-0.1.0
+type: Opaque
+stringData:
+  MONGO_URI: "mongodb://demo-mongo:27017/movies"
+
+---
+# Source: movie-chart/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-movie-chart-config
+  labels:
+    app: movie-chart
+    release: demo
+    chart: movie-chart-0.1.0
+data:
+  PORT: "3000"
+
+---
+# Source: movie-chart/templates/mongo-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-mongo
+  labels:
+    app: movie-chart
+    release: demo
+    chart: movie-chart-0.1.0
+    component: mongo
+spec:
+  clusterIP: None
+  selector:
+    app: movie-chart
+    release: demo
+    component: mongo
+  ports:
+    - port: 27017
+      targetPort: 27017
+
+---
+# Source: movie-chart/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-movie-chart
+  labels:
+    app: movie-chart
+    release: demo
+    chart: movie-chart-0.1.0
+spec:
+  type: ClusterIP
+  selector:
+    app: movie-chart
+    release: demo
+  ports:
+    - port: 80
+      targetPort: 3000
+
+---
+# Source: movie-chart/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-movie-chart
+  labels:
+    app: movie-chart
+    release: demo
+    chart: movie-chart-0.1.0
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: movie-chart
+      release: demo
+  template:
+    metadata:
+      labels:
+        app: movie-chart
+        release: demo
+    spec:
+      containers:
+        - name: movie-api
+          image: "idf775/movie-api:1.1"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: LOG_LEVEL
+              value: "info"
+          envFrom:
+            - configMapRef:
+                name: demo-movie-chart-config
+            - secretRef:
+                name: demo-movie-chart-secret
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+
+---
+# Source: movie-chart/templates/mongo-statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: demo-mongo
+  labels:
+    app: movie-chart
+    release: demo
+    chart: movie-chart-0.1.0
+    component: mongo
+spec:
+  serviceName: demo-mongo
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-chart
+      release: demo
+      component: mongo
+  template:
+    metadata:
+      labels:
+        app: movie-chart
+        release: demo
+        component: mongo
+    spec:
+      containers:
+        - name: mongo
+          image: mongo:7
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: mongo-data
+              mountPath: /data/db
+  volumeClaimTemplates:
+    - metadata:
+        name: mongo-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi

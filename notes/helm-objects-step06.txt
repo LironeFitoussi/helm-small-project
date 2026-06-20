@@ -1,0 +1,28 @@
+NAME                                      READY   STATUS     RESTARTS      AGE
+pod/demo-mongodb-7597b57fc-g92q8          0/1     Init:0/1   0             12s
+pod/demo-movie-chart-56ff4cc5c9-ngnkq     1/1     Running    0             5m43s
+pod/demo-movie-chart-56ff4cc5c9-rj7vl     1/1     Running    0             6m47s
+pod/local-wp-mariadb-0                    1/1     Running    1 (21m ago)   6d5h
+pod/local-wp-wordpress-697d97cf5d-6cvt8   1/1     Running    1 (21m ago)   6d5h
+pod/mongo-0                               1/1     Running    0             16m
+pod/nginx-85bc587484-cpf94                1/1     Running    1 (21m ago)   6d2h
+
+NAME                                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
+service/demo-mongodb                ClusterIP      10.102.254.245   <none>        27017/TCP                       12s
+service/demo-movie-chart            ClusterIP      10.97.162.46     <none>        80/TCP                          6m47s
+service/kubernetes                  ClusterIP      10.96.0.1        <none>        443/TCP                         6d7h
+service/local-wp                    NodePort       10.111.164.1     <none>        8080:30182/TCP,8443:31604/TCP   6d5h
+service/local-wp-mariadb            ClusterIP      10.111.99.187    <none>        3306/TCP                        6d5h
+service/local-wp-mariadb-headless   ClusterIP      None             <none>        3306/TCP                        6d5h
+service/local-wp-wordpress          LoadBalancer   10.100.195.29    <pending>     80:32753/TCP,443:30209/TCP      6d5h
+service/mongo                       ClusterIP      None             <none>        27017/TCP                       16m
+service/movie-api                   ClusterIP      10.97.24.49      <none>        80/TCP                          20m
+service/nginx-svc                   ClusterIP      10.108.187.25    <none>        80/TCP                          6d2h
+
+NAME                                                STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/data-local-wp-mariadb-0       Bound    pvc-10ff1280-cd22-4b92-b3d3-a32f9ddf1f9d   8Gi        RWO            standard       <unset>                 6d5h
+persistentvolumeclaim/data-my-wordpress-mariadb-0   Bound    pvc-f3221925-0548-4ce5-9ff4-915c4cc13ab8   8Gi        RWO            standard       <unset>                 6d6h
+persistentvolumeclaim/demo-mongodb                  Bound    pvc-47634372-535c-46e9-8586-ec6f7421b1f1   1Gi        RWO            standard       <unset>                 12s
+persistentvolumeclaim/local-wp-wordpress            Bound    pvc-bb2762c5-c600-4650-8339-89720922f2cf   10Gi       RWO            standard       <unset>                 6d5h
+persistentvolumeclaim/mongo-data-demo-mongo-0       Bound    pvc-dbea8a5f-44d2-4f27-b1f2-cdffeb534504   1Gi        RWO            standard       <unset>                 6m47s
+persistentvolumeclaim/mongo-data-mongo-0            Bound    pvc-cf205715-e1ae-41ca-aa05-2a672fa55786   1Gi        RWO            standard       <unset>                 16m

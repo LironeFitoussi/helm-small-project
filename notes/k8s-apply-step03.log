@@ -1,0 +1,4 @@
+configmap/movie-api-config created
+deployment.apps/movie-api created
+secret/movie-api-secret created
+service/movie-api created

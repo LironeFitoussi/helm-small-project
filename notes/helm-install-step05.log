@@ -1,0 +1,18 @@
+Release "demo" does not exist. Installing it now.
+NAME: demo
+LAST DEPLOYED: Sat Jun 20 17:42:06 2026
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+NOTES:
+Movie API installed.
+
+Port forward:
+kubectl port-forward svc/demo-movie-chart 8080:80
+
+Health:
+curl http://localhost:8080/health
+MongoDB mode: in-cluster Mongo enabled.
+Mongo service: demo-mongo

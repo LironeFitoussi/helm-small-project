@@ -1,0 +1,35 @@
+replicaCount: 2
+
+image:
+  repository: idf775/movie-api
+  tag: "1.1"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+config:
+  PORT: "3000"
+
+secret:
+  mongoUri: "mongodb://root:secretpass@{{ .Release.Name }}-mongodb:27017/movies?authSource=admin"
+
+mongodb:
+  enabled: true
+  architecture: standalone
+  auth:
+    rootPassword: "secretpass"
+  persistence:
+    enabled: true
+    size: 1Gi
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/mongodb
+  global:
+    security:
+      allowInsecureImages: true
+
+extraEnv:
+  LOG_LEVEL: "info"

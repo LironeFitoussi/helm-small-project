@@ -1,0 +1,14 @@
+Movie API installed.
+
+Port forward:
+kubectl port-forward svc/{{ include "movie-chart.fullname" . }} 8080:{{ .Values.service.port }}
+
+Health:
+curl http://localhost:8080/health
+
+{{- if .Values.mongodb.enabled }}
+MongoDB mode: in-cluster Mongo enabled.
+Mongo service: {{ .Release.Name }}-mongodb
+{{- else }}
+MongoDB mode: external Mongo.
+{{- end }}

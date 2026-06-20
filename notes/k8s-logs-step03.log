@@ -1,0 +1,10 @@
+INFO:     Started server process [7]
+INFO:     Waiting for application startup.
+INFO:movie-api:starting up (log level=INFO)
+INFO:movie-api:[db] connected to mongodb://host.docker.internal:27017/movies
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)
+INFO:     10.244.0.1:50976 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:50982 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:50990 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:33286 - "GET /health HTTP/1.1" 200 OK

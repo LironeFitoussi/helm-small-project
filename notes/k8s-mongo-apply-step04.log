@@ -1,0 +1,2 @@
+service/mongo created
+statefulset.apps/mongo created
