@@ -9,3 +9,8 @@
 - applied k8s manifests
 - checked rollout status
 - checked pods and deployment logs
+
+- opened port-forward to svc/movie-api on localhost:8080
+- verified /health through Kubernetes Service
+- created and listed movie through Kubernetes Service
+- Step 03 completed
