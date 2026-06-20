@@ -4,3 +4,5 @@
 - added .dockerignore
 - added Dockerfile
 - image target: dude775/movie-api:1.0
+
+- built docker image dude775/movie-api:1.0
